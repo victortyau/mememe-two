@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,11 +31,49 @@
                             <outlet property="delegate" destination="Kmg-Hh-ocM" id="2Fa-MH-nZC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="List" id="ajt-9d-AjD"/>
+                    <navigationItem key="navigationItem" title="List" id="ajt-9d-AjD">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Fci-dz-Wwv">
+                            <connections>
+                                <segue destination="1m1-oS-692" kind="popoverPresentation" popoverAnchorBarButtonItem="Fci-dz-Wwv" id="X7M-Es-qx8">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o5G-f3-Bm0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2546" y="-256"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="92o-5z-qFm">
+            <objects>
+                <viewController id="5I5-qn-IsL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h5J-mB-c0J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Uvw-yp-v3n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVS-9c-QmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3525" y="-807"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K2d-mk-dZ7">
+            <objects>
+                <viewController id="1m1-oS-692" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UTI-3N-NsG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Wud-IA-VMz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ks-h4-RTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3509" y="-30"/>
         </scene>
         <!--Grid-->
         <scene sceneID="bLx-4h-9TB">
@@ -59,11 +98,34 @@
                             <outlet property="delegate" destination="IkK-6V-23p" id="ANj-VB-28Q"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Grid" id="rCs-dH-hSJ"/>
+                    <navigationItem key="navigationItem" title="Grid" id="rCs-dH-hSJ">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="3x3-ff-tMp">
+                            <connections>
+                                <segue destination="1m1-oS-692" kind="popoverPresentation" popoverAnchorBarButtonItem="3x3-ff-tMp" id="hua-pF-xXr">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkb-8Y-ttd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2553" y="405"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dth-GJ-Y8Y">
+            <objects>
+                <viewController id="tKk-fP-fpX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nS5-ng-jCS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PVj-YQ-5CZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9i-2T-4Te" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3525" y="775"/>
         </scene>
         <!--Grid-->
         <scene sceneID="mVu-vR-BQ1">
@@ -118,7 +180,11 @@
             <point key="canvasLocation" x="407" y="-61"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hua-pF-xXr"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
