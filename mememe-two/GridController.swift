@@ -19,12 +19,11 @@ class GridController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        cCollectionView.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        cCollectionView.reloadData()
+        collectionView.reloadData()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,7 +31,7 @@ class GridController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GridCellController", for: indexPath) as! GridCellController
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "grid_cell", for: indexPath) as! GridCellController
         let meme = self.memes[(indexPath as NSIndexPath).row]
 
         cell.nameLabel.text = meme.top+" "+meme.bottom

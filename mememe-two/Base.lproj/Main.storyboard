@@ -210,7 +210,7 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="grid_cell" id="gHr-GG-bAk" customClass="GridCellController" customModule="mememe_two" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PPJ-ZC-5gm">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="grid_cell" insetsLayoutMarginsFromSafeArea="NO" id="PPJ-ZC-5gm">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -244,7 +244,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cCollectionView" destination="di7-Uh-skq" id="iVC-F0-RSl"/>
+                        <outlet property="cCollectionView" destination="di7-Uh-skq" id="X7t-OP-cXy"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOd-zG-NW4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -288,7 +288,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X7M-Es-qx8"/>
+        <segue reference="jdc-3D-POE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="94"/>
