@@ -9,7 +9,7 @@ import UIKit
 
 class ListController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
+    var tableView: UITableView!
     
     var memes: [Meme]! {
         let object = UIApplication.shared.delegate
