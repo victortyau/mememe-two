@@ -9,6 +9,8 @@ import UIKit
 
 class GridController: UICollectionViewController {
     
+    @IBOutlet weak var cCollectionView: UICollectionView!
+    
     var memes: [Meme]! {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
@@ -17,7 +19,12 @@ class GridController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        cCollectionView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        cCollectionView.reloadData()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

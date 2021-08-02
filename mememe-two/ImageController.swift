@@ -18,7 +18,7 @@ class ImageController: UIViewController, UIImagePickerControllerDelegate, UINavi
     
       let imagePicker = UIImagePickerController()
       let memeTextAttributes: [NSAttributedString.Key: Any] = [
-          NSAttributedString.Key.strokeColor: UIColor.blue  /* TODO: fill in appropriate UIColor */,
+          NSAttributedString.Key.strokeColor: UIColor.black  /* TODO: fill in appropriate UIColor */,
           NSAttributedString.Key.foregroundColor: UIColor.white /* TODO: fill in appropriate UIColor */,
           NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
           NSAttributedString.Key.strokeWidth: -2.0 /* TODO: fill in appropriate Float */
