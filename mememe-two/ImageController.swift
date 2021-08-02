@@ -142,19 +142,21 @@ class ImageController: UIViewController, UIImagePickerControllerDelegate, UINavi
       }
       
       func generatedMemedImage() -> UIImage {
-          
-          topBar.isHidden = true
-          bottomBar.isHidden = true
+         hideShow(true)
           
           UIGraphicsBeginImageContext(self.view.frame.size)
           view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
           let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
           UIGraphicsEndImageContext()
           
-          topBar.isHidden = false
-          bottomBar.isHidden = false
+          hideShow(false)
           
           return memedImage
       }
+    
+    func hideShow(_ isHidden: Bool) {
+        topBar.isHidden = isHidden
+        bottomBar.isHidden = isHidden
+    }
 
 }
