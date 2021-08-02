@@ -16,9 +16,6 @@ class ImageController: UIViewController, UIImagePickerControllerDelegate, UINavi
       @IBOutlet weak var topBar: UIToolbar!
       @IBOutlet weak var bottomBar: UIToolbar!
     
-    
-    
-      
       let imagePicker = UIImagePickerController()
       let memeTextAttributes: [NSAttributedString.Key: Any] = [
           NSAttributedString.Key.strokeColor: UIColor.blue  /* TODO: fill in appropriate UIColor */,
@@ -89,7 +86,8 @@ class ImageController: UIViewController, UIImagePickerControllerDelegate, UINavi
       
       func save() {
           let meme = generatedMemedImage()
-          _ = Meme(top: topMessage.text!, bottom: bottomMessage.text!, image: imagePickerView.image, memeImage: meme)
+          let current_meme = Meme(top: topMessage.text!, bottom: bottomMessage.text!, image: imagePickerView.image, memeImage: meme)
+          (UIApplication.shared.delegate as! AppDelegate).memes.append(current_meme)
       }
       
       func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
