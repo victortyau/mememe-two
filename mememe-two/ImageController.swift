@@ -61,16 +61,10 @@ class ImageController: UIViewController, UIImagePickerControllerDelegate, UINavi
       }
     
       func presentPickerViewController(source: UIImagePickerController.SourceType) {
-        
-        if source == .photoLibrary {
-          imagePicker.sourceType = .photoLibrary
-          present(imagePicker, animated: true, completion: nil)
-        }else {
-            let camera = UIImagePickerController()
-            camera.sourceType = .camera
-            camera.allowsEditing = true
-            present(camera, animated: true, completion: nil)
-        }
+        imagePicker.sourceType = source
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
       }
       
       @IBAction func onShare(_ sender: Any) {
